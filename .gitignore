@@ -1,0 +1,34 @@
+# Ignore everything in the root except the "web-assets" directory.
+/*
+!.gitignore
+!web-assets/
+
+# ignore all files starting with .
+.*
+# track .editorconfig file (i.e. do NOT ignore it)
+!.editorconfig
+
+# track readme.md in the root (i.e. do NOT ignore it)
+!readme.md
+
+# ignore all files that start with ~
+~*
+
+
+
+# Ignore everything in the "web-assets" directory, except the "plugins"
+# and "themes" directories.
+web-assets/*
+!web-assets/plugins/
+!web-assets/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+web-assets/plugins/*
+!web-assets/plugins/motivar_functions_child/
+
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+web-assets/themes/*
+!web-assets/themes/*child/
