@@ -6,6 +6,42 @@ Template: corfu_dominoes
 Version: 1.2
 */
 
+.be-row.be-wrap .hero-section-inner-wrap {
+ padding-top: 100px;
+}
 
+#book_search {
+ background: #0c6ea3 !important;
+}
 
+#sbp_external_search_button:hover {
+ opacity: 0.6 !important;
+}
 
+#book_search .sbp-title-h h4 {
+ color: white;
+}
+
+.accommodation_wrap .sbp_page_price_container .sbp_style_card .sbp_content input {
+ color: white;
+}
+
+#book_search .sbp_style_card {
+ box-shadow: none;
+}
+
+.sbp-frontend-form.sbp_needed.sbp_label.front_sbp_client_name,
+.sbp-frontend-form.sbp_needed.sbp_label.front_sbp_client_surname,
+.sbp-frontend-form.sbp_needed.sbp_label.front_sbp_client_email {
+ margin-bottom: 0px !important;
+}
+
+.sbp-frontend-form.sbp_label.front_sbp_client_title.sbp_select,
+.sbp-frontend-form.sbp_needed.sbp_label.front_sbp_client_country.sbp_select,
+.sbp-frontend-form.sbp_needed.sbp_label.front_sbp_client_phone.sbp_input {
+ margin-bottom: 20px !important;
+}
+
+.sbp-frontend-form.sbp_label.front_sbp_special_requests.sbp_textarea textarea{
+ height: 200px;
+}

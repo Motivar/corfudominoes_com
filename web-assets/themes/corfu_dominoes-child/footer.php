@@ -28,8 +28,10 @@
 			break;
 		}
 	}
+
+
 	/*Custom Bottom Content*/
-	if (is_archive()) {
+	if (is_archive() && (!is_post_type_archive('sbp_accommodation')) &&(!is_post_type_archive('sbp_travel_services')) && (!is_post_type_archive('sbp_map_points')) && (!is_tax('sbp_accommodation_type')) && (!is_tax('sbp_map_point_category')) && (!is_tax('sbp_travel_services_type'))) {
 					echo do_shortcode('[gftr carousel_flag="1" amenities_flag="1" subscribe_flag="1"]');
 	}
 	else {
@@ -37,30 +39,35 @@
 									echo do_shortcode('[gftr carousel_flag="0" amenities_flag="0" subscribe_flag="1"]');
 					}
 					else {
-									$id = $post_id;
-									$bottom_widgets = get_post_meta( $id, 'sbp_select_bottom_widgets', true);
-									$carousel_headline = get_post_meta( $id , 'sbp_carousel_headline', true);
-									$amenities_headline = get_post_meta( $id , 'sbp_amenities_headline', true);
-									$subscribe_headline = get_post_meta( $id , 'sbp_exclusive_offers_headline', true);
-									$widgets = '';
-									if (!empty( $bottom_widgets )){
-										foreach ($bottom_widgets as $b) {
-											$widgets .= $b.'="1" ';
+						if ((!(is_singular('sbp_accommodation'))) || (!(is_singular('sbp_map_points')))) {
+							//die('xristos');
+						}
+						else{
+										$id = $post_id;
+										$bottom_widgets = get_post_meta( $id, 'sbp_select_bottom_widgets', true);
+										$carousel_headline = get_post_meta( $id , 'sbp_carousel_headline', true);
+										$amenities_headline = get_post_meta( $id , 'sbp_amenities_headline', true);
+										$subscribe_headline = get_post_meta( $id , 'sbp_exclusive_offers_headline', true);
+										$widgets = '';
+										if (!empty( $bottom_widgets )){
+											foreach ($bottom_widgets as $b) {
+												$widgets .= $b.'="1" ';
+											}
+										$headlines = '';
+										if (!empty($carousel_headline)) {
+											$headlines .= 'carousel_headline="'.$carousel_headline.'" ';
 										}
-									$headlines = '';
-									if (!empty($carousel_headline)) {
-										$headlines .= 'carousel_headline="'.$carousel_headline.'" ';
-									}
-									if (!empty($amenities_headline)) {
-										$headlines .= 'amenities_headline="'.$amenities_headline.'" ';
-									}
-									if (!empty($subscribe_headline)) {
-										$headlines .= 'exclusive_offers_headline="'.$subscribe_headline.'" ';
-									}
-										$scd = 'gftr post_id="'.$id.' " '.$widgets.' '.$headlines;
-										$msg = do_shortcode('['.$scd.']');
-										echo $msg;
-									}
+										if (!empty($amenities_headline)) {
+											$headlines .= 'amenities_headline="'.$amenities_headline.'" ';
+										}
+										if (!empty($subscribe_headline)) {
+											$headlines .= 'exclusive_offers_headline="'.$subscribe_headline.'" ';
+										}
+											$scd = 'gftr post_id="'.$id.' " '.$widgets.' '.$headlines;
+											$msg = do_shortcode('['.$scd.']');
+											echo $msg;
+										}
+								}
 					}
 	}
 

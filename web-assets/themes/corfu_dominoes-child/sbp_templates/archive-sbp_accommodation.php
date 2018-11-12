@@ -19,44 +19,14 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-
+global $wp_query, $post;
 $obj = get_queried_object();
 if (isset($obj->term_id) && !empty($obj->term_id)) {
-    $terms = array();
-    $terms[] = $obj->term_id;
-    if ($obj->parent == 0){
-        $children = get_term_children($obj->term_id, $obj->taxonomy) ?: array();
-        if (!empty($children)){
-            foreach ($children as $id) {
-                $terms[] = $id;
-            }
-        }
-    }
-    $the_query = new WP_Query( array(
-                    'posts_per_page'=>6,
-                    'post_type'=>'sbp_accommodation',
-                    'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
-                    'tax_query' => array(
-                                    array (
-                                        'taxonomy' => $obj->taxonomy,
-                                        'field' => 'term_id',
-                                        'terms' => $terms,
-                                        'operator' => 'IN'
-                                        ),
-                                    ) 
-                                )); 
     $title = $obj->name;
 }   else {
-    $the_query = new WP_Query( array(
-                    'posts_per_page'=>6,
-                    'post_type'=>'sbp_accommodation',
-                    'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
-                    )); 
-
     $title = post_type_archive_title( '', false );
 }
 
-if (is_post_type_archive('sbp_accommodation') || is_tax()) {
     get_header(); 
     $default_img = get_field('archives_default_img', 'options') ?: '';
     ?>
@@ -68,7 +38,8 @@ if (is_post_type_archive('sbp_accommodation') || is_tax()) {
                                     <div class="hero-section-inner">
                                         <div class="sbp_title_container sbp_font_size">
                                             <?php
-                                            apply_filters('sbp_get_post_title_breadcrumb',$post->ID, $title);  
+                                            //apply_filters('sbp_get_post_title_breadcrumb',$post->ID, $title);  
+                                            sbp_custom_partials('partials/global/breadcrumb.php');
                                             ?>
                                         </div>
                                     </div>
@@ -77,52 +48,20 @@ if (is_post_type_archive('sbp_accommodation') || is_tax()) {
                         </div>
                     </div>
                 </div>
+    <div class="sbp_section sbp_3_3">
+        <?php  
+            $content=apply_filters('sbp_archive_divs_filter',
+            array(
+            'sidebar'=>'partials/global/sidebar.php',
+            'content'=>'partials/global/main_content.php'
+            ),$post,$object);
+            foreach ($content as $file)
+            {
+                echo sbp_custom_partials($file);
+            }
+        ?>
+    </div>
 
-    <div id="main-content" class="main-content">
-        <div id="primary" class="content-area">
-            <div id="content" class="site-content" role="main">
-                <div class="sbp_section sbp_3_3 be-wrap">
-                    <div class="left sbp_1_3">
-                        <?php //get_sidebar(); 
-                            dynamic_sidebar("accommodation-archive-widget");
-                        ?>
-                    </div>   
-                    <div class="right sbp_2_3">
-
-                        <?php
-                            // Start the Loop.
-                            $content = '';
-                        ?>
-                        <div class="sbp_accommodation_archive sbp_center sbp_flex_wrap">
-                        <?php
-                            while ($the_query-> have_posts()) :$the_query->the_post(); 
-                                global $wp_query, $post;
-                               sbp_custom_partials ('partials/sbp_accommodation/card.php');
-                            endwhile;
-                        ?>                    
-                        </div>
-                        <?php sbp_custom_partials('partials/global/pagination.php'); ?>
-                    </div>
-                </div>
-                <div class="dom_bottom_sections">
-                    <?php
-                    echo do_shortcode('[gftr amenities_flag="1" subscribe_flag="1"]');
-                    ?>
-                </div>
-            </div><!-- #content -->
-        </div><!-- #primary -->
-    </div><!-- #main-content -->
 
     <?php
     get_footer();
-}
-else {
-    $current_accommodation_id = get_the_ID();
-
-    while ( $the_query -> have_posts()) : $the_query -> the_post(); 
-        global $wp_query, $post;
-        if ($post->ID !== $current_accommodation_id) {
-            sbp_custom_partials ('partials/sbp_accommodation/card.php');
-        }
-    endwhile;
-}

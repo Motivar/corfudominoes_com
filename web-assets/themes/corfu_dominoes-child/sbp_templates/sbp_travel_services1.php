@@ -19,52 +19,34 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-get_header(); ?>
+get_header(); 
 
-<div id="main-content" class="main-content">
-    <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
-
-            <?php
-                // Start the Loop.
-                $content = '';
                 while ( have_posts() ) : the_post();
                     global $wp_query, $post;
                     ?>
-                    <div class="accommodation_wrap be-wrap">
+                    <div class="accommodation_wrap filox_section_container">
                     <?php
                     sbp_custom_partials('partials/global/gallery.php');
-                    sbp_custom_partials ('partials/sbp_accommodation/min_price.php'); 
+                    sbp_custom_partials ('partials/global/min_price.php'); 
                     ?>
-                    <div class="sbp_title_container sbp_font_size"><?php  apply_filters('sbp_get_post_title_breadcrumb',$post->ID,$post->post_title); ?> </div> 
-
+                    <div class="sbp_title_container sbp_font_size"><?php sbp_custom_partials('partials/global/breadcrumb.php'); ?> </div> 
                     <?php
-                    sbp_custom_partials ('partials/sbp_accommodation/facilities.php');
-                    sbp_custom_partials ('partials/sbp_accommodation/nearby_places.php'); 
+                    sbp_custom_partials ('partials/global/facilities.php');
                     sbp_custom_partials ('partials/global/description.php'); 
                     ?>
                     </div>
                     <?php
+
                        $carousel = do_shortcode('[sbp_carousel post_type="'.$post->post_type.'" current_post="'.$post->ID.'" filter="0"]');
                        if (!empty($carousel)) {
                            ?>
-                            <div class="sbp_relative_title sbp_sections_margin sbp_center"><h3><?php echo __('Relative Accommodation', 'simple-bookings-plugin'); ?></h3></div>
+                            <div class="sbp_relative_title sbp_sections_margin sbp_center"><h3><?php echo sbp_travel_services_others; ?></h3></div>
                            <?php
                            echo $carousel;
                        }
-                    sbp_custom_partials('partials/global/book_now_button.php');
-                    ?>
-                    <div class="dom_bottom_sections">
-                    <?php
-                    echo do_shortcode('[gftr amenities_flag="1" subscribe_flag="1"]');
-                    ?>
-                    </div>
-                    <?php
-                endwhile;
-            ?>
-        </div><!-- #content -->
-    </div><!-- #primary -->
-</div><!-- #main-content -->
 
-<?php
+                    sbp_custom_partials('partials/global/book_now_button.php');
+
+                endwhile;
+
 get_footer();

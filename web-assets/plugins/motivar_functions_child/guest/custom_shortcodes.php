@@ -604,9 +604,11 @@ function activities_events($atts)
     $show        = '';
 
     foreach ($query_posts as $p) {
+           
         $title        = $p['main']->post_title;
         $id           = $p['main']->ID;
-        $description  = preg_replace("/<h([1-6]{1})>.*?<\/h\\1>/si", '', $p['metas']['sbp_description']);
+        //$description  = preg_replace("/<h([1-6]{1})>.*?<\/h\\1>/si", '', $p['metas']['sbp_description']);
+        $description  = preg_replace("/<h([1-6]{1})>.*?<\/h\\1>/si", '', $p['main']->post_content);
         $description  = strip_tags($description);
         $images_array = get_post_meta($id, 'sbp_gallery', true) ?: array();
         $permalink=$p['permalink'];

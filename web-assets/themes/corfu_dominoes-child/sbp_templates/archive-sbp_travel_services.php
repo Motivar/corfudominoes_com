@@ -43,7 +43,8 @@ if (is_post_type_archive('sbp_travel_services') || is_tax()) {
                                     <div class="hero-section-inner">
                                         <div class="sbp_title_container sbp_font_size">
                                             <?php
-                                            apply_filters('sbp_get_post_title_breadcrumb',$post->ID, $title);  
+                                            //apply_filters('sbp_get_post_title_breadcrumb',$post->ID, $title);
+                                            sbp_custom_partials('partials/global/breadcrumb.php');  
                                             ?>
                                         </div>
                                     </div>

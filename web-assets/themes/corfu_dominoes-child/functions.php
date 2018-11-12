@@ -18,3 +18,9 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+/*add_filter('sbp_archive_title_section_filter', function($content){
+  $default_img = get_field('archives_default_img', 'options') ?: '';
+      
+      
+  return "xristos";
+},10,1);*/

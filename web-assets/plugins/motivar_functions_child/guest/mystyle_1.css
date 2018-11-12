@@ -1767,11 +1767,6 @@ body:not(.archive) .sbp_style_card:hover {
     padding: 10px;
 }
 
-.sbp_button_color:hover,
-#sbp_external_search_button:hover {
-    background-color: #0c6ea3 !important;
-}
-
 .dom_page_price_container p a:hover,
 .dom_page_price_container .sbp_mediumbtn,
 #sbp_external_search_button {

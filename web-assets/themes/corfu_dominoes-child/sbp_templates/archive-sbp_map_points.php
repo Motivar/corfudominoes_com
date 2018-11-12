@@ -44,7 +44,6 @@ if (isset($obj->term_id) && !empty($obj->term_id)) {
     $title = post_type_archive_title( '', false );
 }
 
-
 if (is_post_type_archive('sbp_map_points') || is_tax()) {
     get_header(); 
     $default_img = get_field('archives_default_img', 'options') ?: '';
@@ -57,7 +56,8 @@ if (is_post_type_archive('sbp_map_points') || is_tax()) {
                                     <div class="hero-section-inner">
                                         <div class="sbp_title_container sbp_font_size">
                                             <?php
-                                            apply_filters('sbp_get_post_title_breadcrumb',$post->ID, $title);  
+                                            //apply_filters('sbp_get_post_title_breadcrumb',$post->ID, $title);
+                                            sbp_custom_partials('partials/global/breadcrumb.php');  
                                             ?>
                                         </div>
                                     </div>
@@ -72,8 +72,7 @@ if (is_post_type_archive('sbp_map_points') || is_tax()) {
             <div id="content" class="site-content" role="main">
                 <div class="be-wrap">
                     <div class="sbp_section sbp_3_3"> 
-                        <div class="right sbp_2_3">
-
+                        <div class="left sbp_2_3">
                             <?php
                                 // Start the Loop.
                                 $content = '';
@@ -88,18 +87,13 @@ if (is_post_type_archive('sbp_map_points') || is_tax()) {
                             </div>
                             <?php sbp_custom_partials('partials/global/pagination.php'); ?>
                         </div>
-                        <div class="left sbp_1_3">
+                        <div class=" right sbp_1_3">
                             <?php 
-                                get_sidebar();
+                                get_sidebar(); 
                             ?>
-                        </div>  
+                        </div> 
                     </div>
                 </div>
-                    <div class="dom_bottom_sections">
-                    <?php
-                    echo do_shortcode('[gftr amenities_flag="1" subscribe_flag="1"]');
-                    ?>
-                    </div>
             </div><!-- #content -->
         </div><!-- #primary -->
     </div><!-- #main-content -->
