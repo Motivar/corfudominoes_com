@@ -42,6 +42,11 @@ Version: 1.2
  margin-bottom: 20px !important;
 }
 
-.sbp-frontend-form.sbp_label.front_sbp_special_requests.sbp_textarea textarea{
+.sbp-frontend-form.sbp_label.front_sbp_special_requests.sbp_textarea textarea {
  height: 200px;
+}
+
+.sbp-alpha-text {
+ padding-left: 100px;
+ padding-right: 100px;
 }
