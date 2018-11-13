@@ -31,7 +31,7 @@
 
 
 	/*Custom Bottom Content*/
-	if (is_archive() && (!is_post_type_archive('sbp_accommodation')) &&(!is_post_type_archive('sbp_travel_services')) && (!is_post_type_archive('sbp_map_points')) && (!is_tax('sbp_accommodation_type')) && (!is_tax('sbp_map_point_category')) && (!is_tax('sbp_travel_services_type'))) {
+	if (is_archive() && (!is_post_type_archive('sbp_accommodation')) &&(!is_post_type_archive('sbp_travel_services')) && (!is_post_type_archive('sbp_map_points')) && (!is_tax('sbp_accommodation_type')) && (!is_tax('sbp_map_point_category')) && (!is_tax('sbp_travel_services_type')) && (!is_category())) {
 					echo do_shortcode('[gftr carousel_flag="1" amenities_flag="1" subscribe_flag="1"]');
 	}
 	else {
@@ -40,7 +40,7 @@
 					}
 					else {
 						if ((!(is_singular('sbp_accommodation'))) || (!(is_singular('sbp_map_points')))) {
-							//die('xristos');
+
 						}
 						else{
 										$id = $post_id;
