@@ -79,7 +79,7 @@ function gftr_scd( $atts )
                         $button_code = '';
                         if(sbp_booking_post_url!=''){
                             $carousel_button_url=sbp_booking_post_url;
-                            $button_code = '[row row_class= "long_button"][one_col][button button_text= "'.$carousel_button_txt.'" icon_alignment= "left" url= "' . $carousel_button_url . '" new_tab= "no" type= "medium" alignment= "center" bg_color= "#fe6847" hover_bg_color= "#ff5833" color= "#ffffff" hover_color= "#ffffff" border_width= "1" border_color= "#fe6847" hover_border_color= "#ff5833" button_style= "none" background_animation= "bg-animation-none" animation_type= "fadeIn"][/one_col][/row]';
+                            $button_code = '[row row_class= "long_button"][one_col][button button_text= "'.$carousel_button_txt.'" icon_alignment= "left" url= "' . $carousel_button_url . '" new_tab= "no" type= "medium" alignment= "center" bg_color= "#fe6847" hover_bg_color= "#3d92c3" color= "#ffffff" hover_color= "#ffffff" border_width= "1" border_color= "#fe6847" hover_border_color= "#3d92c3" button_style= "none" background_animation= "bg-animation-none" animation_type= "fadeIn"][/one_col][/row]';
                         }
                         $msg .= do_shortcode( '[section bg_color= "#fefcfb" bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_animation= "none" padding_top= "0" padding_bottom= "82" full_screen_header_scheme= "background--light"][row][one_col bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" padding_value= "%" animate_overlay= "none" vertical_align= "middle" animation_type= "flipInX" column_class="motivar-text-block,motivar-center"][text wrap_alignment= "center" scroll_to_animate= "1" animate= "1" animation_type= "fadeIn" ]<h1>' . $carousel_headline . '</h1>[/text][/one_col][/row][row][one_col][text wrap_alignment= "center" animation_type= "fadeIn" ][sbp_carousel post_type="sbp_accommodation" taxonomy="sbp_accommodation_type" limit="20" current_post="'.$post_id.'"][/text][/one_col][/row]'.$button_code.'[/section]' );
                         break;
@@ -94,7 +94,7 @@ function gftr_scd( $atts )
                         $button_code = '';
                         if(get_post_status($amenities_button_url) =='publish'){
                             $amenities_button_url=get_permalink($amenities_button_url);
-                            $button_code = '[row row_class= "long_button"][one_col][button button_text= "'.$amenities_button_txt.'" icon_alignment= "left" url= "' . $amenities_button_url . '" new_tab= "no" type= "medium" alignment= "center" bg_color= "#fe6847" hover_bg_color= "#ff5833" color= "#ffffff" hover_color= "#ffffff" border_width= "1" border_color= "#fe6847" hover_border_color= "#ff5833" button_style= "none" background_animation= "bg-animation-none" animation_type= "fadeIn"][/one_col][/row]';
+                            $button_code = '[row row_class= "long_button"][one_col][button button_text= "'.$amenities_button_txt.'" icon_alignment= "left" url= "' . $amenities_button_url . '" new_tab= "no" type= "medium" alignment= "center" bg_color= "#fe6847" hover_bg_color= "#3d92c3" color= "#ffffff" hover_color= "#ffffff" border_width= "1" border_color= "#fe6847" hover_border_color= "#3d92c3" button_style= "none" background_animation= "bg-animation-none" animation_type= "fadeIn"][/one_col][/row]';
                         }
                 */
                         $msg .= do_shortcode( '[section bg_image= "' . $amenities_bg_img . '" bg_repeat= "no-repeat" bg_attachment= "fixed" bg_position= "center center" bg_stretch= "1" bg_animation= "be-bg-parallax" overlay_color= "#0f084b" overlay_opacity= "70" section_id= "amenities_section" full_screen_header_scheme= "background--dark"][row][one_col][text wrap_alignment= "center" animation_type= "fadeIn" ]<h2 style="text-align: center;">' . $amenities_headline . '</h2>[/text][/one_col][/row][row][one_col][text  wrap_alignment= "center" animation_type= "fadeIn" ][sbp_amenities_carousel columns="5" ids="125,66,67,68,77,65,80"][/text][/one_col][/row][/section]' );
@@ -171,7 +171,7 @@ function accordion_scd_func( $atts )
                                 $review_link = get_post_meta( $id, 'sbp_review_link', true );
                                 $ota         = get_the_terms( $id, 'sbp_review_ota', true );
                                 $related_ota = $ota[ 0 ]->name;
-                                $element .= do_shortcode( '[toggle title= "' . $title . '" title_color= "#0d0221" title_bg_color= "#fafbfd" ]' . $description . '<p class="review_link"><a href="' . $review_link . '" target="_blank">' . $related_ota . ': ' . $grade . '</a></p>[/toggle]' );
+                                $element .= do_shortcode( '[toggle title= "' . $title . '" title_color= "#2b313e" title_bg_color= "#fafbfd" ]' . $description . '<p class="review_link"><a href="' . $review_link . '" target="_blank">' . $related_ota . ': ' . $grade . '</a></p>[/toggle]' );
                         }
 
                         break;
@@ -200,7 +200,7 @@ function accordion_scd_func( $atts )
                                         $job_reqs_text  = __( 'Job Requirements:', 'sbp_career_job_reqs_txt' );
                                         $job_bens_text  = __( 'Job Benefits:', 'sbp_career_job_bens_txt' );
 
-                                        $element .= do_shortcode( '[toggle title= "' . $title . '" title_color= "#0d0221" title_bg_color= "#fafbfd" ]<div class="career_div"><div class="career_desc"><h6>'.$description_text.'</h6><p>' . $description . '</p></div><div class="career_loc"><h6>'.$location_text.'</h6><p>'.$location.'</p></div><div class="career_reqs"><h6>'.$job_reqs_text.'</h6><p>' . $req_content . '</p></div><div class="career_bens"><h6>'.$job_bens_text.'</h6><p>' . $ben_content . '</p></div></div>[/toggle]' );
+                                        $element .= do_shortcode( '[toggle title= "' . $title . '" title_color= "#2b313e" title_bg_color= "#fafbfd" ]<div class="career_div"><div class="career_desc"><h6>'.$description_text.'</h6><p>' . $description . '</p></div><div class="career_loc"><h6>'.$location_text.'</h6><p>'.$location.'</p></div><div class="career_reqs"><h6>'.$job_reqs_text.'</h6><p>' . $req_content . '</p></div><div class="career_bens"><h6>'.$job_bens_text.'</h6><p>' . $ben_content . '</p></div></div>[/toggle]' );
                                 }
                         } else {
                                 $empty_jobs_msg = __( '<h4>There are no job openings right now.</h4>', 'sbp_no_jobs_msg');
@@ -613,9 +613,9 @@ function activities_events($atts)
         $images_array = get_post_meta($id, 'sbp_gallery', true) ?: array();
         $permalink=$p['permalink'];
         if ($more_btn == 'yes') {
-            $right_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $permalink. '" new_tab= "no" type= "medium" alignment= "center" hover_bg_color= "#0c6ea3" color= "#0c6ea3" hover_color= "#ffffff" border_width= "2" border_color= "#0c6ea3" hover_border_color= "#0c6ea3" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
+            $right_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $permalink. '" new_tab= "no" type= "medium" alignment= "center" hover_bg_color= "#3d92c3" color= "#3d92c3" hover_color= "#ffffff" border_width= "2" border_color= "#3d92c3" hover_border_color= "#3d92c3" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
 
-            $left_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $permalink . '" new_tab= "no" type= "medium" alignment= "left" hover_bg_color= "#ffffff" color= "#ffffff" hover_color= "#0c6ea3" border_width= "2" border_color= "#ffffff" hover_border_color= "#ffffff" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
+            $left_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $permalink . '" new_tab= "no" type= "medium" alignment= "left" hover_bg_color= "#ffffff" color= "#ffffff" hover_color= "#3d92c3" border_width= "2" border_color= "#ffffff" hover_border_color= "#ffffff" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
         } else {
 
             $right_window_btn = '';
@@ -685,9 +685,9 @@ function sbp_activities_children_func($atts)
             /*$url_id = get_option('sbp_service_category_' . $child_id . '_select_page_url');*/
             $url    = get_the_guid($url_id); /*this to replace*/
             if (!empty($url)) {
-                $right_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $url . '" new_tab= "no" type= "medium" alignment= "center" hover_bg_color= "#0c6ea3" color= "#0c6ea3" hover_color= "#ffffff" border_width= "2" border_color= "#0c6ea3" hover_border_color= "#0c6ea3" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
+                $right_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $url . '" new_tab= "no" type= "medium" alignment= "center" hover_bg_color= "#3d92c3" color= "#3d92c3" hover_color= "#ffffff" border_width= "2" border_color= "#3d92c3" hover_border_color= "#3d92c3" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
 
-                $left_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $url . '" new_tab= "no" type= "medium" alignment= "left" hover_bg_color= "#ffffff" color= "#ffffff" hover_color= "#0c6ea3" border_width= "2" border_color= "#ffffff" hover_border_color= "#ffffff" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
+                $left_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $url . '" new_tab= "no" type= "medium" alignment= "left" hover_bg_color= "#ffffff" color= "#ffffff" hover_color= "#3d92c3" border_width= "2" border_color= "#ffffff" hover_border_color= "#ffffff" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
             } else {
                 $right_window_btn = '';
                 $left_window_btn  = '';

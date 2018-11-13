@@ -31,7 +31,7 @@ function motivar_functions_save_acf( $post_id ) {
                 update_post_meta($post_id, 'be_themes_hero_section_bg_animation_canvas', 'none');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_video', '0');
                 update_post_meta($post_id, 'be_themes_hero_section_overlay', '1');
-                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#0c6ea3');
+                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#3d92c3');
                 update_post_meta($post_id, 'be_themes_hero_section_content', '<h1 style="text-align: center;">' . $tttile . '</h1>');
                 update_post_meta($post_id, 'be_themes_hero_section_container_wrap', 'yes');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_image', $hero_image);
@@ -55,7 +55,7 @@ function motivar_functions_save_acf( $post_id ) {
                 update_post_meta($post_id, 'be_themes_hero_section_bg_animation_canvas', 'none');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_video', '0');
                 update_post_meta($post_id, 'be_themes_hero_section_overlay', '1');
-                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#0c6ea3');
+                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#3d92c3');
                 update_post_meta($post_id, 'be_themes_hero_section_content', '<h1 style="text-align: center;">' . $tttile . '</h1>');
                 update_post_meta($post_id, 'be_themes_hero_section_container_wrap', 'yes');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_image', $hero_image);
@@ -79,7 +79,7 @@ function motivar_functions_save_acf( $post_id ) {
                 update_post_meta($post_id, 'be_themes_hero_section_bg_animation_canvas', 'none');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_video', '0');
                 update_post_meta($post_id, 'be_themes_hero_section_overlay', '1');
-                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#0c6ea3');
+                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#3d92c3');
                 update_post_meta($post_id, 'be_themes_hero_section_content', '<h1 style="text-align: center;">' . $tttile . '</h1>');
                 update_post_meta($post_id, 'be_themes_hero_section_container_wrap', 'yes');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_image', $hero_image);
@@ -143,7 +143,7 @@ function motivar_functions_save_acf( $post_id ) {
                 update_post_meta($post_id, 'be_themes_hero_section_bg_animation_canvas', 'none');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_video', '0');
                 update_post_meta($post_id, 'be_themes_hero_section_overlay', '1');
-                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#0c6ea3');
+                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#3d92c3');
                 update_post_meta($post_id, 'be_themes_hero_section_content', '<h1 style="text-align: center;">' . $tttile . '</h1>');
                 update_post_meta($post_id, 'be_themes_hero_section_container_wrap', 'yes');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_image', $hero_image);
@@ -168,7 +168,7 @@ function motivar_functions_save_acf( $post_id ) {
                 update_post_meta($post_id, 'be_themes_hero_section_bg_animation_canvas', 'none');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_video', '0');
                 update_post_meta($post_id, 'be_themes_hero_section_overlay', '1');
-                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#0c6ea3');
+                update_post_meta($post_id, 'be_themes_hero_section_bg_overlay_color', '#3d92c3');
                 update_post_meta($post_id, 'be_themes_hero_section_content', '<h1 style="text-align: center;">' . $tttile . '</h1>');
                 update_post_meta($post_id, 'be_themes_hero_section_container_wrap', 'yes');
                 update_post_meta($post_id, 'be_themes_hero_section_bg_image', $hero_image);

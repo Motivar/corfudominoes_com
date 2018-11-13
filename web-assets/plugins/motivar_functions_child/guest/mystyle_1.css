@@ -169,7 +169,7 @@ input.dom_events_check {
 }
 
 .sbp_slider .sbp_bot a:hover {
-    background: #0d0221 !important;
+    background: #2b313e !important;
     color: #fff !important;
 }
 
@@ -264,7 +264,7 @@ input.dom_events_check {
 
 .dropdown-content li>a,
 .dropdown-content li>span {
-    color: #0d0221 !important;
+    color: #2b313e !important;
 }
 
 span.wpcf7-not-valid-tip {
@@ -425,7 +425,7 @@ div:not(.widget) .sbp_cnt_div {
 
 .review_link a,
 .accordion .accordion-head.with-bg.ui-accordion-header {
-    color: #0c6ea3 !important;
+    color: #3d92c3 !important;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
@@ -471,7 +471,7 @@ div:not(.widget) .sbp_cnt_div {
 }
 
 .sidebar_box {
-    background-color: #0d0221;
+    background-color: #2b313e;
     width: 100% !important;
     min-height: 250px;
 }
@@ -741,7 +741,7 @@ footer .clearfix {
 }
 
 #footer {
-    background-color: #0d0221 !important;
+    background-color: #2b313e !important;
     color: #ffffff !important;
     text-align: center !important;
 }
@@ -752,7 +752,7 @@ footer .clearfix {
 
 #exclusive_offers {
     text-align: center;
-    background-color: #0c6ea3 !important;
+    background-color: #3d92c3 !important;
     padding-top: 140px !important;
     padding-bottom: 140px !important;
 }
@@ -789,7 +789,7 @@ footer .clearfix {
 }
 
 #exclusive_offers input#submit:hover {
-    background-color: #ff5833;
+    background-color: #3d92c3;
 }
 
 #exclusive_offers p:not(.sml_line) {
@@ -854,12 +854,12 @@ footer .clearfix {
 }
 
 .no-transparent #navigation ul:not(.sub-menu)>li:last-child {
-    background-color: rgb(254, 104, 71);
+    background-color: rgba(61,146,195,1);
     color: white;
 }
 
 .no-transparent #navigation ul:not(.sub-menu)>li:last-child:hover {
-    background-color: #0d0221;
+    background-color: #2b313e;
 }
 
 /*footer widgets*/
@@ -957,7 +957,7 @@ body.top-header.slider-bar-opened #main {
 
 #slidebar-menu .mobile-sub-menu-controller {
     font-size: 1.6rem;
-    color: rgb(254, 104, 71) !important;
+    color: rgba(61,146,195,1) !important;
 }
 
 #slidebar-menu .menu-item .sub-menu {
@@ -1480,7 +1480,7 @@ body.top-header.slider-bar-opened #main {
 
 .picker__date-display,
 .picker__weekday-display {
-    background-color: #0c6ea3 !important;
+    background-color: #3d92c3 !important;
 }
 
 .picker__close,
@@ -1516,7 +1516,7 @@ body.top-header.slider-bar-opened #main {
 }
 
 .picker__day.picker__day--today {
-    color: #0c6ea3 !important;
+    color: #3d92c3 !important;
 }
 
 #sbp_rates {
@@ -1544,8 +1544,8 @@ body.top-header.slider-bar-opened #main {
 .picker__day--selected,
 .picker__day--selected:hover,
 .picker--focused .picker__day--selected {
-    border: solid 2px #0c6ea3 !important;
-    color: #0D0221 !important;
+    border: solid 2px #3d92c3 !important;
+    color: #2b313e !important;
     border-radius: 0px !important;
     background-color: transparent !important;
     background: transparent !important;
@@ -1578,15 +1578,15 @@ body.post-type-archive-sbp_accommodation .sbp_3_3 {
 }
 
 .sbp_wrap_slider .reveal.sbp_secondary_font_color {
-    background: #0c6ea3 !important;
+    background: #3d92c3 !important;
 }
 
 .sbp_wrap_slider .dots .circle {
-    background-color: #0c6ea3 !important;
+    background-color: #3d92c3 !important;
 }
 
 .sbp_accommodation_archive .sbp_card {
-    background: #0c6ea3 !important;
+    background: #3d92c3 !important;
 }
 
 .sbp_wrap_slider .reveal .sbp_facilities>div span {
@@ -1603,7 +1603,7 @@ body.post-type-archive-sbp_accommodation .sbp_3_3 {
 }
 
 .sbp_wrap_slider .reveal .sbp_button a:hover {
-    color: rgb(254, 104, 71) !important;
+    color: rgba(61,146,195,1) !important;
 }
 
 .sbp_review_loop h1,
@@ -1685,7 +1685,7 @@ body.archive #breadcrumbs li {
 }
 
 .filter_option .button.active {
-    color: #0c6ea3 !important;
+    color: #3d92c3 !important;
 }
 
 .dom_bottom_sections {
@@ -1736,7 +1736,7 @@ body:not(.archive) .sbp_style_card:hover {
 }
 
 .sidebar-widgets-wrap .widget .textwidget .card {
-    background: #0c6ea3;
+    background: #3d92c3;
 }
 
 .sidebar-widgets-wrap .widget ul li a {
@@ -1744,7 +1744,7 @@ body:not(.archive) .sbp_style_card:hover {
 }
 
 .sidebar-widgets-wrap .widget ul li a:hover {
-    color: #ff5833;
+    color: #3d92c3;
 }
 
 .sbp_1_3 .dom_page_price_container {
@@ -1790,7 +1790,7 @@ body:not(.archive) .sbp_style_card:hover {
 
 .dom_page_price_container .sbp_mediumbtn,
 #sbp_external_search_button {
-    background-color: #fe6847;
+    background-color: #3d92c3;
     border-radius: 0;
 }
 
@@ -1862,7 +1862,7 @@ body.archive #header {
 
 .dom_events_button a {
     padding: 10px 20px;
-    background-color: rgb(254, 104, 71);
+    background-color: rgba(61,146,195,1);
     color: #fff !important;
     -webkit-transition: all 300ms ease-in-out;
     -moz-transition: all 00ms ease-in-out;
@@ -1870,7 +1870,7 @@ body.archive #header {
 }
 
 .dom_events_button a:hover {
-    background-color: #0c6ea3;
+    background-color: #3d92c3;
     color: #fff;
 }
 
