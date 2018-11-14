@@ -50,3 +50,28 @@ Version: 1.2
  padding-left: 100px;
  padding-right: 100px;
 }
+
+.page-id-3550 #sbp_external_search_button {
+ background-color: #2c3e50 !important;
+}
+
+.page-id-3550 .sbp-search-wrapper#sbp_search_widget.horizontal .sbp-widget-wrapper {
+ vertical-align: initial !important;
+}
+
+#bottom-widgets .motivar-social-wrapper {
+ text-align: center !important;
+ margin-top: 40px !important;
+}
+
+.page-id-3552 .sbp-search-wrapper {
+ margin-top: 90px;
+}
+
+.sbp_button a {
+ color: white !important;
+}
+
+.be-button-wrap a:hover{
+ opacity: 0.8;
+}
