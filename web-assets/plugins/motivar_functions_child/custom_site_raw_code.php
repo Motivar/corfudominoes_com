@@ -1,7 +1,12 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-if (is_admin())
+
+add_action('admin_init',function()
+{
+
+
+if (current_user_can('administrator'))
     {
     if (function_exists('acf_add_options_page'))
         {
@@ -15,3 +20,23 @@ if (is_admin())
 
         }
     }
+    else
+    {
+       
+
+
+    }
+},10,1);    
+
+
+function custom_menu_page_removing()
+{
+    if (!current_user_can('administrator'))
+    {
+        remove_menu_page('toplevel_page_wpcf7');
+
+    }
+     
+}
+add_action('admin_menu', 'custom_menu_page_removing');
+
