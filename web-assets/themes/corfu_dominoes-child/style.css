@@ -137,7 +137,6 @@ div.wh-widget-send-button-wrapper div.wh-widget-send-button-wrapper-list.wh-widg
 
 body.header-transparent #header-inner-wrap {
  background-color: white !important;
- height: 15vh !important;
 }
 
 #header-top-bar {
@@ -151,4 +150,8 @@ body.header-transparent #header-inner-wrap {
 .layout-box {
  width: 95% !important;
  margin: 0px auto !important;
+}
+
+.fullwidth-slider .be-wrap {
+ max-width: 100% !important;
 }
