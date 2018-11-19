@@ -6,10 +6,6 @@ Template: corfu_dominoes
 Version: 1.2
 */
 
-.be-row.be-wrap .hero-section-inner-wrap {
- padding-top: 100px;
-}
-
 #book_search {
  background: #2b313e !important;
 }
@@ -100,12 +96,6 @@ Version: 1.2
  text-align: center;
 }
 
-#header .transparent #navigation ul li,
-#header .transparent #navigation-right-side ul li,
-#header .transparent #navigation-left-side ul li {
- color: white;
-}
-
 #mosaic_sect {
  padding: 60px 0 !important;
 }
@@ -145,3 +135,15 @@ div.wh-widget-send-button-wrapper div.wh-widget-send-button-wrapper-list.wh-widg
  margin: auto !important;
 }
 
+body.header-transparent #header-inner-wrap {
+ background-color: white !important;
+ height: 15vh !important;
+}
+
+#header-top-bar {
+ opacity: 0 !important;
+}
+
+.be-row.be-wrap .hero-section-inner-wrap {
+ padding-top: 100px !important;
+}
