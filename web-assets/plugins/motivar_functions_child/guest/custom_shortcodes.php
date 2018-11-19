@@ -104,6 +104,7 @@ function gftr_scd( $atts )
                         break;
         }
 
+        /* shortcode for exclussive offers
         switch ( $subscribe_flag ) {
                 case '1':
                         $msg .= do_shortcode( '[section bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_animation= "none" padding_top= "0" padding_bottom= "0" section_id= "motivar_subscribe" full_screen_header_scheme= "background--light"][row][one_col][text wrap_alignment= "center" scroll_to_animate= "1" animate= "1" animation_type= "fadeIn" ][exclusive_offers_content header="' . $exclusive_offers_headline . '" small_line="' . $exclusive_small_line . '"][/text][/one_col][/row][/section]' );
@@ -111,7 +112,7 @@ function gftr_scd( $atts )
 
                 default:
                         break;
-        }
+        }*/
 
         return $msg;
 }
@@ -608,14 +609,13 @@ function activities_events($atts)
         $title        = $p['main']->post_title;
         $id           = $p['main']->ID;
         //$description  = preg_replace("/<h([1-6]{1})>.*?<\/h\\1>/si", '', $p['metas']['sbp_description']);
-        $description  = preg_replace("/<h([1-6]{1})>.*?<\/h\\1>/si", '', $p['main']->post_content);
-        $description  = strip_tags($description);
+        $description  = sbp_limit_text(strip_tags($p['main']->post_content), 30);
         $images_array = get_post_meta($id, 'sbp_gallery', true) ?: array();
         $permalink=$p['permalink'];
         if ($more_btn == 'yes') {
             $right_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $permalink. '" new_tab= "no" type= "medium" alignment= "center" hover_bg_color= "#3d92c3" color= "#3d92c3" hover_color= "#ffffff" border_width= "2" border_color= "#3d92c3" hover_border_color= "#3d92c3" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
 
-            $left_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $permalink . '" new_tab= "no" type= "medium" alignment= "left" hover_bg_color= "#ffffff" color= "#ffffff" hover_color= "#3d92c3" border_width= "2" border_color= "#ffffff" hover_border_color= "#ffffff" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
+            $left_window_btn = '[button button_text= "LEARN MORE" icon_alignment= "left" url= "' . $permalink . '" new_tab= "no" type= "medium" alignment= "center" hover_bg_color= "#3d92c3" color= "#3d92c3" hover_color= "#ffffff" border_width= "2" border_color= "#3d92c3" hover_border_color= "#3d92c3" button_style= "none" background_animation= "bg-animation-slide-left" animation_type= "fadeIn"]';
         } else {
 
             $right_window_btn = '';
@@ -624,13 +624,13 @@ function activities_events($atts)
 
         if ($count % 2 == 0) {
             /*right window*/
-            $show .= do_shortcode('[section bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_stretch= "1" bg_animation= "none" padding_top= "0" padding_bottom= "0" section_id= "mosaic_section" section_class= "full_slider, right_arrow_hide" full_screen_header_scheme= "background--light"][row no_wrapper= "1" no_margin_bottom= "1" no_space_columns= "1" row_class= "slider_img"][one_col bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_stretch= "1" padding_value= "%" animate_overlay= "none" vertical_align= "none" animation_type= "flipInX"][flex_slider auto_slide= "yes" slide_interval= "3000"]' . load_images($images_array) . '[/flex_slider][/one_col][/row][row  row_class= "text_window_right"][one_col bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top right" padding_value= "%" center_pad= "1" animate_overlay= "none" vertical_align= "none" animation_type= "flipInX"][text wrap_alignment= "center" animation_type= "fadeIn" ]<h3 style="text-align: center;">' . $title . '</h3><p style="text-align: left;">' . sbp_limit_text($description, 30) . '</p>[/text]' . $right_window_btn . '[/one_col][/row][/section]');
+            $show .= do_shortcode('[section bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_stretch= "1" bg_animation= "none" padding_top= "0" padding_bottom= "0" section_id= "mosaic_sect" section_class= "right_arrow_hide" full_screen_header_scheme= "background--light"][row no_wrapper= "1" no_margin_bottom= "1" no_space_columns= "1" row_class= "full_slider"][one_col bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_stretch= "1" padding_value= "%" animate_overlay= "none" vertical_align= "none" animation_type= "flipInX"][flex_slider auto_slide= "yes" slide_interval= "3000"]' . load_images($images_array) . '[/flex_slider][/one_col][/row][row  row_class= "text_window_right"][one_col bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top right" padding_value= "%" center_pad= "1" animate_overlay= "none" vertical_align= "none" animation_type= "flipInX"]<h3 style="text-align: center;">' . $title . '</h3>' . $description. $right_window_btn . '[/one_col][/row][/section]');
 
             $count = $count + 1;
         } else {
             /*left window*/
 
-            $show .= do_shortcode('[section bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_stretch= "1" bg_animation= "none" padding_top= "0" padding_bottom= "0" section_id= "mosaic_section" section_class= "full_slider, left_arrow_hide" full_screen_header_scheme= "background--light"][row no_wrapper= "1" no_margin_bottom= "1" no_space_columns= "1" row_class= "slider_img"][one_col bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_stretch= "1" padding_value= "%" animate_overlay= "none" link_overlay= "" vertical_align= "none" animation_type= "flipInX"][flex_slider auto_slide= "yes" slide_interval= "3000"]' . load_images($images_array) . '[/flex_slider][/one_col][/row][row row_class= "text_window_left"][one_col bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top right" padding_value= "%" center_pad= "1" animate_overlay= "none" vertical_align= "none" animation_type= "flipInX"][text max_width= "" wrap_alignment= "center" animation_type= "fadeIn" ]<h3 style="text-align: center;">' . $title . '</h3><p style="text-align: left;">' . strip_tags(sbp_limit_text($description, 30)) . '</p>[/text]' . $left_window_btn . '[/one_col][/row][/section]');
+            $show .= do_shortcode('[section bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_stretch= "1" bg_animation= "none" padding_top= "0" padding_bottom= "0" section_id= "mosaic_sect" section_class= "left_arrow_hide" full_screen_header_scheme= "background--light"][row no_wrapper= "1" no_margin_bottom= "1" no_space_columns= "1" row_class= "full_slider"][one_col bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top left" bg_stretch= "1" padding_value= "%" animate_overlay= "none" link_overlay= "" vertical_align= "none" animation_type= "flipInX"][flex_slider auto_slide= "yes" slide_interval= "3000"]' . load_images($images_array) . '[/flex_slider][/one_col][/row][row row_class= "text_window_left"][one_col bg_repeat= "repeat" bg_attachment= "scroll" bg_position= "top right" padding_value= "%" center_pad= "1" animate_overlay= "none" vertical_align= "none" animation_type= "flipInX"]<h3 style="text-align: center;">' . $title . '</h3>' .$description. $left_window_btn . '[/one_col][/row][/section]');
             $count = $count + 1;
         }
     }

@@ -72,6 +72,76 @@ Version: 1.2
  color: white !important;
 }
 
-.be-button-wrap a:hover{
+.be-button-wrap a:hover {
  opacity: 0.8;
 }
+
+@media only screen and (min-width: 767px) {
+ #mosaic_sect .text_window_right {
+  float: right;
+  width: 36% !important;
+  background: rgba(255, 255, 255, 0.85);
+ }
+ #mosaic_sect .full_slider {
+  width: 60% !important;
+  margin: 0 2%;
+  display: inline-table !important;
+ }
+ #mosaic_sect .text_window_left {
+  float: left;
+  width: 36% !important;
+  background: rgba(255, 255, 255, 0.85);
+ }
+}
+
+#mosaic_sect .text_window_left,
+#mosaic_sect .text_window_right {
+ max-width: 100% !important;
+ text-align: center;
+}
+
+#header .transparent #navigation ul li,
+#header .transparent #navigation-right-side ul li,
+#header .transparent #navigation-left-side ul li {
+ color: white;
+}
+
+#mosaic_sect {
+ padding: 60px 0 !important;
+}
+
+.menu_button_width div.be-button-wrap {
+ width: 100% !important;
+}
+
+@media only screen and (max-width: 768px) {
+ body.tax-sbp_travel_services_type #mosaic_sect {
+  padding: 60px 30px !important;
+ }
+}
+
+.sidebar-widgets-wrap .widget ul li a:hover {
+ color: #fe6847 !important;
+}
+
+div.wh-widget-send-button-wrapper div.wh-widget-send-button-wrapper-list.wh-widget-show-get-button a.wh-widget-send-button-get-butt {
+ display: none !important;
+}
+
+@media only screen and (min-width: 1000px) {
+ #header .transparent #header-wrap .logo {
+  top: -30px !important;
+  margin: 0px !important;
+ }
+}
+
+@media only screen and (max-width: 999px) and (min-width: 960px) {
+ #header .transparent #header-wrap .logo {
+  top: 0px !important;
+ }
+}
+
+#header-inner-wrap.no-transparent #header-wrap .logo {
+ margin: auto !important;
+}
+
