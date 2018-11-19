@@ -238,12 +238,12 @@ input.dom_events_check {
 /*form fixes*/
 
 .motivar_area a {
- color: white;
+ color: #039be5 !important;
  margin-right: 0px !important;
 }
 
 .motivar_area a:hover {
- color: #fe6847;
+ color: #2c3e50 !important;
 }
 
 .sbp_book_now.current_page_item {
@@ -726,8 +726,6 @@ footer .clearfix {
 }
 
 #footer {
- background-color: #2b313e !important;
- color: #ffffff !important;
  text-align: center !important;
 }
 
