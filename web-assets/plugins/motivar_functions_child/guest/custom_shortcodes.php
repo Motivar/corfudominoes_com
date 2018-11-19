@@ -671,7 +671,7 @@ function min_price_card()
     if ($post_id != '') {
         $extra = '?from_post='.$post_id;
         $org_id = get_post_meta($post_id, 'sbp_calendar_id', true);
-        $min_price = get_post_meta($org_id, 'sbp_min_price', true) ?: '';
+        $min_price = get_post_meta($org_id, '_sbp_min_price', true) ?: '';
         $data = '.sbp_flexx';
     } else {
         $min_price = get_option('sbp_global_min_price') ?: '';
