@@ -173,3 +173,7 @@ body.header-transparent #header-inner-wrap {
  height: 50px !important;
  min-height: 0px !important;
 }
+
+.home .be-section.fullwidth-slider.clearfix {
+ background-color: white !important;
+}

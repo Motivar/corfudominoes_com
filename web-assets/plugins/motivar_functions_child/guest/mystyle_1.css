@@ -629,7 +629,7 @@ button,
 }
 
 .be-section:not(.full_slider):not(#slider_container):not(#motivar_subscribe):not(#services_page_layout) {
- padding: 140px 0;
+ padding: 100px 0;
 }
 
 #slider_container .be-wrap {
