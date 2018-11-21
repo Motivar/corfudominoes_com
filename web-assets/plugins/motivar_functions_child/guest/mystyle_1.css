@@ -1260,7 +1260,7 @@ body.top-header.slider-bar-opened #main {
   width: 75% !important;
  }
  body:not(.home) .hero-section-inner h1 {
-  font-size: 40px;
+  font-size: 35px;
   padding: 0 5px;
  }
 }

@@ -177,3 +177,39 @@ body.header-transparent #header-inner-wrap {
 .home .be-section.fullwidth-slider.clearfix {
  background-color: white !important;
 }
+
+@media only screen and (max-width: 999px) {
+ .accommodation_wrap {
+  display: unset;
+ }
+ .dom_events_button {
+  margin-bottom: 50px;
+ }
+ #header .logo {
+  margin-left: 0px !important;
+ }
+ #header #header-controls-right {
+  margin-right: 0px !important;
+ }
+ .mr_copied_wrapper {
+  margin-top: -85px;
+ }
+ .sb-slidebar-content .menu {
+  padding: 0px 0;
+ }
+ .hero-section-inner {
+  vertical-align: unset !important;
+ }
+ #mosaic_sect {
+  padding: 0px !important;
+ }
+}
+
+@media only screen and (max-width: 768px) {
+ .dom_home_booking_search_container #sbp_external_booking_search {
+  margin: 0px 0 !important;
+ }
+ .column-block .be-custom-column-pad {
+  padding: 0px 10px !important;
+ }
+}
