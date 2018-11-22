@@ -212,4 +212,7 @@ body.header-transparent #header-inner-wrap {
  .column-block .be-custom-column-pad {
   padding: 0px 10px !important;
  }
+ .single-sbp_accommodation .mobile_book_button {
+  width: 95%;
+ }
 }
