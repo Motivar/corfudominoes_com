@@ -1877,3 +1877,11 @@ body.sbp-modal-open #back-to-top {
 .sbp_user_actions span {
  padding: 1px 20px !important;
 }
+
+ul.sub-menu  li a:hover{
+  color: #fe6847 !important;
+}
+.sbp_page_img_container {
+ box-shadow: none !important;
+ -webkit-box-shadow: none !important;
+}
