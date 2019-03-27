@@ -16,7 +16,7 @@ function motivar_social_icons_functions($atts)
     $url = plugin_dir_url(__FILE__).'media/';
     $path = plugin_dir_path(__FILE__).'media/';
     extract(shortcode_atts(array(
-                 'color' => '',
+                 'color' => 'white',
                  'pinterest' => '',
                  'tripadvisor' => '',
                  'facebook' => '',

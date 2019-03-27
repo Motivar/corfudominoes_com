@@ -629,7 +629,7 @@ button,
 }
 
 .be-section:not(.full_slider):not(#slider_container):not(#motivar_subscribe):not(#services_page_layout) {
- padding: 140px 0;
+ padding: 100px 0;
 }
 
 #slider_container .be-wrap {
@@ -719,10 +719,6 @@ footer .clearfix {
 
 #bottom-widgets-wrap {
  text-align: center !important;
-}
-
-#bottom-widgets {
- background-color: #ffffff !important;
 }
 
 #footer {
@@ -1264,7 +1260,7 @@ body.top-header.slider-bar-opened #main {
   width: 75% !important;
  }
  body:not(.home) .hero-section-inner h1 {
-  font-size: 40px;
+  font-size: 35px;
   padding: 0 5px;
  }
 }
@@ -1880,4 +1876,12 @@ body.sbp-modal-open #back-to-top {
 
 .sbp_user_actions span {
  padding: 1px 20px !important;
+}
+
+ul.sub-menu  li a:hover{
+  color: #fe6847 !important;
+}
+.sbp_page_img_container {
+ box-shadow: none !important;
+ -webkit-box-shadow: none !important;
 }

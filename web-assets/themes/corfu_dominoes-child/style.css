@@ -119,15 +119,11 @@ div.wh-widget-send-button-wrapper div.wh-widget-send-button-wrapper-list.wh-widg
 }
 
 @media only screen and (min-width: 1000px) {
- #header .transparent #header-wrap .logo {
-
- }
+ #header .transparent #header-wrap .logo {}
 }
 
 @media only screen and (max-width: 999px) and (min-width: 960px) {
- #header .transparent #header-wrap .logo {
- 
- }
+ #header .transparent #header-wrap .logo {}
 }
 
 #header-inner-wrap.no-transparent #header-wrap .logo {
@@ -153,4 +149,70 @@ body.header-transparent #header-inner-wrap {
 
 .fullwidth-slider .be-wrap {
  max-width: 100% !important;
+}
+
+#bottom-widgets-wrap,
+#bottom-widgets h6,
+.sbp-alpha-text {
+ color: white !important;
+}
+
+#bottom-widgets {
+ background-color: #2c3e50 !important;
+}
+
+#bottom-widgets .widget_text {
+ padding-bottom: 30px;
+}
+
+.cnt-center input {
+ background-color: #2c3e50 !important;
+}
+
+.page-id-3781 .wpcf7 textarea {
+ height: 50px !important;
+ min-height: 0px !important;
+}
+
+.home .be-section.fullwidth-slider.clearfix {
+ background-color: white !important;
+}
+
+@media only screen and (max-width: 999px) {
+ .accommodation_wrap {
+  display: unset;
+ }
+ .dom_events_button {
+  margin-bottom: 50px;
+ }
+ #header .logo {
+  margin-left: 0px !important;
+ }
+ #header #header-controls-right {
+  margin-right: 0px !important;
+ }
+ .mr_copied_wrapper {
+  margin-top: -85px;
+ }
+ .sb-slidebar-content .menu {
+  padding: 0px 0;
+ }
+ .hero-section-inner {
+  vertical-align: unset !important;
+ }
+ #mosaic_sect {
+  padding: 0px !important;
+ }
+}
+
+@media only screen and (max-width: 768px) {
+ .dom_home_booking_search_container #sbp_external_booking_search {
+  margin: 0px 0 !important;
+ }
+ .column-block .be-custom-column-pad {
+  padding: 0px 10px !important;
+ }
+ .single-sbp_accommodation .mobile_book_button {
+  width: 95%;
+ }
 }
