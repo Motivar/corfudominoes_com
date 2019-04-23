@@ -6,7 +6,15 @@
     var show_float = 0;
     var check_in, check_out = 0;
 
+
     $(document).ready(function() {
+
+        setTimeout(function () {
+            products_check();
+        }, 5000);
+        $(document).on('sbp_update_sidebar_callback', function () {
+            products_check();
+        });
 
 
         $(document).on('click', 'a:not([target="_blank"],[href^="#"],.map_link,[href^="javascript:void(0)"],.thumb-wrap,[rel="nofollow"],._hj-f5b2a1eb-9b07_action_toggle_widget,.ui-datepicker-next,.ui-datepicker-prev,.ui-state-disabled,.sbp_form_wrapper a,.sbp_title a,.hasDatepicker a)', function(event) {
@@ -361,6 +369,17 @@
             });
 
     };
-
+function products_check() {
+    /*check for trasnfer*/
+    if ($('.sbp_accordion_inner[data-product_id="3376"]').length) {
+        $('.dominoes-custom').addClass('awm-needed').show();
+        $('.dominoes-custom').find('.input').addClass('awm-needed');
+        $('.dominoes-custom').find('input').addClass('sbp_frontend_req');
+    } else {
+        $('.dominoes-custom').removeClass('awm-needed').hide();
+        $('.dominoes-custom').find('.input').removeClass('awm-needed');
+        $('.dominoes-custom').find('input').removeClass('sbp_frontend_req');
+    }
+};
 
 })(jQuery);

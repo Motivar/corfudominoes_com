@@ -4,6 +4,24 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+
+add_filter('sbp_accommodation_booking_fields_filter', function ($msg) {
+
+    $msg['sbp_arrival_time']['class']= array('sbp_req_for_save', 'sbp_frontend_req');
+    $msg['sbp_flight_number'] = array(
+       'label' => __('Flight Number', 'motivar'),
+       'case' => 'input',
+       'type' => 'text',
+       'attributes' => array('placeholder' => sbp_fill_in.' '.sbp_Flight_Number),
+               'class' => array('sbp_req_for_save', 'sbp_frontend_req'),
+               'sbp_show_widget' => false,
+               'sbp_show_in_extras' => true,
+               'label_class'=>array('dominoes-custom')
+   );
+
+    return $msg;
+}, 10, 1);
+
 add_action('admin_init', function () {
     if (current_user_can('administrator')) {
         if (function_exists('acf_add_options_page')) {
