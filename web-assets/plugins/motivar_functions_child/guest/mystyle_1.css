@@ -1201,6 +1201,9 @@ body.top-header.slider-bar-opened #main {
  .sliderbar-nav-controller-wrap {
   display: none;
  }
+ #header-inner-wrap.top-animate .sbp_book_now {
+  padding-right: 20px !important;
+ }
 }
 
 @media only screen and (max-width: 960px) {
@@ -1461,14 +1464,6 @@ body.top-header.slider-bar-opened #main {
  }
 }
 
-@media only screen and (max-width: 1060px) and (min-width:961px) {
-
- #navigation a,
- #navigation-right-side a,
- #navigation-left-side a {
-  padding: 0 5px !important;
- }
-}
 
 @media only screen and (max-width: 1290px) and (min-width:1060px) {
  #navigation a {

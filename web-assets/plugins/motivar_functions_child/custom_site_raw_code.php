@@ -176,3 +176,12 @@ add_filter('sbp_services_availability_fields_filter', function ($metas) {
 
     return $metas;
 }, 10, 1);
+
+add_filter('sbp_show_rates', function ($min_price) {
+    
+    $min_price='From '.$min_price.' € /night';
+
+    return $min_price;
+    
+}, 10, 1);
+
