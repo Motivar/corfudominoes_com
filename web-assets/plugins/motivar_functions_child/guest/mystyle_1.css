@@ -1961,3 +1961,13 @@ ul.sub-menu li a:hover {
 .home #sbp_external_booking_search #sbp_external_search_button {
  background-color: #fe6847 !important;
 }
+
+@media (max-width: 750px) {
+ body.no-mobile-scroll {
+  width: 100% !important;
+ }
+.sbp_booking_wrapper .be-wrap {
+ max-width: none !important;
+}
+} 
+
