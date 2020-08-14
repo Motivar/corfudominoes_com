@@ -85,6 +85,27 @@
 					</div>
 				<?php endfor; ?>
 			</div>
+
+<div id="hc-ratingRatingHotel">
+				<div id="hc-ratingRatingHotel__inner"> <img id="hc-ratingRatingHotel__ribbon" src="https://media.datahc.com/ratinghotel/stellar2/ribbon.png"/>
+								<span id="hc-ratingRatingHotel__year">2020</span>
+								<span id="hc-ratingRatingHotel__award">RECOGNITION OF EXCELLENCE</span>
+								<div id="hc-ratingRatingHotel__hotelink"> <a id="hc-ratingRatingHotel__hotelname" target="_blank" href="javascript:void(0)">Dominoes Aparthotel</a> </div>
+								<a id="hc-ratingRatingHotel__hclink" target="_blank" href="http://www.hotelscombined.com">HotelsCombined</a> 
+					</div>
+					<div id="hc-ratingRatingHotel__rating"> 
+									<span id="hc-ratingRatingHotel__number" style="text-transform:uppercase"><center><font size="1">Greece</font></center></span>
+									<div id="hc-data__hotellink" style="display: none;">Dominoes_Aparthotel</div>
+									<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"> </script>
+									<script>(function(){var rand = Math.floor((Math.random() * 99999999) + 1); function loadjscssfile(a,b){if("js"==b){var
+									c=document.createElement("script");c.setAttribute("type","text/javascript"),c.setAttribute("src",a)}else if("css"==b){var
+									c=document.createElement("link");c.setAttribute("rel","stylesheet"),c.setAttribute("type","text/css"),c.setAttribute("href",a)}"undefined"!=typeof
+									c&&document.getElementsByTagName("head")[0].appendChild(c)} loadjscssfile('https://media.datahc.com/ratinghotel/stellar2/styles.css?v' + rand, 'css');
+									loadjscssfile('https://media.datahc.com/ratinghotel/stellar2/script.js?v' + rand, 'js'); })(); </script>
+					</div>
+</div>
+
+
 					<?php 
 		dynamic_sidebar("custom-footer-cards");
 		?>
